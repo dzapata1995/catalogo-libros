@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.dzapata</groupId>
-	<artifactId>challege-literatura</artifactId>
+	<artifactId>challenge-literatura</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>challege-literatura</name>
-	<description>Challege de Literatura</description>
+	<name>challenge-literatura</name>
+	<description>Challenge de Literatura</description>
 
 	<properties>
 		<java.version>17</java.version>
