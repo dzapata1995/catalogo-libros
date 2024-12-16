@@ -2,6 +2,7 @@ package com.dzapata.literatura.service.impl;
 
 import com.dzapata.literatura.service.BookService;
 import com.dzapata.literatura.service.ConsoleService;
+import com.dzapata.literatura.service.GutendexService;
 import com.dzapata.literatura.utils.Constants;
 import com.dzapata.literatura.utils.ConsoleUI;
 import org.springframework.stereotype.Service;
@@ -14,14 +15,16 @@ public class ConsoleServiceImpl implements ConsoleService {
 
     private final ConsoleUI consoleUI;
     private final BookService bookService;
+    private final GutendexService gutendexService;
 
-    public ConsoleServiceImpl(ConsoleUI consoleUI, BookService bookService) {
+    public ConsoleServiceImpl(ConsoleUI consoleUI, BookService bookService, GutendexService gutendexService) {
         this.consoleUI = consoleUI;
         this.bookService = bookService;
+        this.gutendexService = gutendexService;
     }
 
     @Override
-    public void start() throws Exception {
+    public void start() {
         boolean isExecution = true;
         boolean isError = false;
         Scanner scanner = new Scanner(System.in);
@@ -35,7 +38,7 @@ public class ConsoleServiceImpl implements ConsoleService {
 
                 switch (selection) {
                     case 1:
-                        bookService.registrarLibro();
+                        gutendexService.registrarLibro();
                         break;
 
                     case 2:

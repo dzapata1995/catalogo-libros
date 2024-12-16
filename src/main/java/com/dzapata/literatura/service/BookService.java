@@ -1,9 +1,9 @@
 package com.dzapata.literatura.service;
 
-import java.util.List;
+import com.dzapata.literatura.dto.response.BookResponseDTO;
 
 public interface BookService {
-    void registrarLibro() throws Exception;
+    void guardarLibro(BookResponseDTO dto);
     void buscarLibro();
     void buscarAutor();
     void buscarAutoresVivos();
